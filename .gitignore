@@ -1,0 +1,23 @@
+# ==========================
+# IDE Files
+# Ignore editor and IDE settings
+# ==========================
+.vs/
+.vscode/
+.idea/
+
+# ==========================
+# Build Output
+# Ignore generated build artifacts
+# ==========================
+bin/
+obj/
+node_modules/
+dist/
+
+# ==========================
+# Operating System Files
+# Ignore OS-specific hidden files
+# ==========================
+.DS_Store
+Thumbs.db
