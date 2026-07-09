@@ -22,6 +22,24 @@ Depending on the situation, there are multiple ways to resolve the issue:
 - If sensitive files (such as API keys or secrets) were committed and pushed, rewrite the repository history using tools such as `git filter-repo` or BFG Repo-Cleaner, then force-push the cleaned history.
 - For future commits, ensure the required ignore rules are added before tracking project files to prevent unnecessary files from entering version control.
 
-## Task 6 – Fast-Forward Merge
+## Task 6 – Merge Result
 
-The `feature/add-navigation` branch was merged into `main` using a fast-forward merge. Since the `main` branch only received changes to `README.md` after the feature branch was created and there were no conflicting modifications to the files changed in the feature branch, Git was able to move the `main` branch pointer forward without creating a merge commit. This kept the commit history linear and easy to follow.
+The merge of the `feature/add-navigation` branch into `main` was **not** a fast-forward merge because both branches received their own commits after the feature branch was created. The feature branch contained three commits that implemented the navigation feature, while the `main` branch received a separate commit that updated the `README.md` file. As a result, the commit histories diverged, so Git could not simply move the `main` branch pointer to the latest commit on the feature branch. Instead, Git created a merge commit to combine the changes from both branches while preserving the complete history.
+
+**Commit history before merge:**
+
+
+                 A ── B ── C   (feature/add-navigation)
+                /
+... ── X
+                \
+                 D            (main)
+
+
+Where:
+
+* **X** = Common commit from which both branches were created.
+* **A, B, C** = Three commits that added and enhanced the navigation feature.
+* **D** = Commit made on `main` to update `README.md`.
+
+Since both branches contained unique commits after **X**, Git performed a **non-fast-forward merge** by creating a merge commit that combined the histories of both branches.
