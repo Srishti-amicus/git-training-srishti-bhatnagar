@@ -9,3 +9,12 @@ nav a {
     text-decoration: none;
     margin-right: 15px;
 }
+aside {
+    width: 220px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+aside ul {
+    list-style: none;
+}
