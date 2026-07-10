@@ -47,3 +47,15 @@ Since both branches contained unique commits after **X**, Git performed a **non-
 ## Task 8 – Rebase
 
 This task demonstrates how Git rebase can be used to integrate the latest changes from the main branch while maintaining a linear commit history.
+
+### Rebase vs Merge
+
+Both **rebase** and **merge** are used to integrate changes from one branch into another, but they serve different purposes.
+
+A **merge** combines the histories of two branches by creating a merge commit. It preserves the complete branch history and is generally preferred when working on shared branches because it accurately reflects the development timeline.
+
+A **rebase** moves or reapplies the commits from one branch on top of another branch, creating a linear commit history without additional merge commits. It is useful for keeping a feature branch up to date with the latest changes from the main branch before merging.
+
+### Golden Rule of Rebasing
+
+The golden rule of rebasing is **never rebase commits that have already been shared with other collaborators**. Rebasing rewrites commit history by creating new commit hashes, which can lead to confusion and conflicts for anyone else working on the same branch. It is safest to use rebase only on local or private branches before they are merged into the main branch.
