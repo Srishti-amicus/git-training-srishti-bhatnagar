@@ -1,3 +1,4 @@
 Application Status: Broken
 Version: 1
 Feature A implemented successfully.
+Feature B implemented.
