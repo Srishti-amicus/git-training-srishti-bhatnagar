@@ -87,3 +87,7 @@ git stash drop
 ### Why use Git Stash?
 
 Git Stash allows developers to temporarily save unfinished work without committing it to the repository. It is particularly useful when an urgent task requires switching branches, enabling developers to resume their previous work later without losing any changes.
+
+## Pull Request Demo
+
+This section was added to demonstrate a Pull Request using the **Create a Merge Commit** strategy in GitHub.
