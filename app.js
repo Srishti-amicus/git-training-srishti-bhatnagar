@@ -6,3 +6,10 @@ navLinks.forEach(link => {
         console.log("Navigation link clicked");
     });
 });
+const sidebarLinks = document.querySelectorAll("aside a");
+
+sidebarLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        console.log("Sidebar link selected");
+    });
+});
