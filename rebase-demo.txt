@@ -1,2 +1,5 @@
 Interactive Rebase Practice
 This file is created for Task 12.
+Interactive rebase helps maintain a clean commit history.
+It allows commits to be reordered, squashed and reworded.
+A clean history makes collaboration easier.
