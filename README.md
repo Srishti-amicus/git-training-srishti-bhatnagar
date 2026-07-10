@@ -43,3 +43,7 @@ Where:
 * **D** = Commit made on `main` to update `README.md`.
 
 Since both branches contained unique commits after **X**, Git performed a **non-fast-forward merge** by creating a merge commit that combined the histories of both branches.
+
+## Task 8 – Rebase
+
+This task demonstrates how Git rebase can be used to integrate the latest changes from the main branch while maintaining a linear commit history.
